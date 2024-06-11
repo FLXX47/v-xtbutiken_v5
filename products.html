@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-569QZVXL');</script>
+    <!-- End Google Tag Manager -->
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-569QZVXL"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Våra Växter</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Våra Växter</h1>
+    </header>
+    <nav>
+        <a href="index.html">Hem</a>
+        <a href="products.html">Växter</a>
+        <a href="plant-test.html">Växt test</a>
+        <a href="#">Om oss</a>
+        <button id="menu-toggle">☰</button>
+    </nav>
+    <div id="cart">
+        <h2>Din Korg</h2>
+        <ul id="cart-items"></ul>
+        <button class="btn" onclick="emptyCart()">Töm Korgen</button>
+    </div>
+    <div class="container">
+        <div class="product">
+            <img src="images/plant1.jpg" alt="Växt 1">
+            <h2>Vacker Grön Växt</h2>
+            <p>Denna växt är perfekt för ditt hem och kontor. Den är lättskött och mycket dekorativ.</p>
+            <button class="btn" onclick="addToCart('Vacker Grön Växt')">Lägg i varukorg</button>
+        </div>
+        <div class="product">
+            <img src="images/plant2.jpg" alt="Växt 2">
+            <h2>Elegant Blommande Växt</h2>
+            <p>En underbar blommande växt som ger färg och liv till vilket rum som helst.</p>
+            <button class="btn" onclick="addToCart('Elegant Blommande Växt')">Lägg i varukorg</button>
+        </div>
+        <div class="product">
+            <img src="images/plant3.jpg" alt="Växt 3">
+            <h2>Unik Sukulent</h2>
+            <p>Denna sukulent är ett utmärkt val för dem som vill ha något unikt och lättskött.</p>
+            <button class="btn" onclick="addToCart('Unik Sukulent')">Lägg i varukorg</button>
+        </div>
+        <div class="product">
+            <img src="images/plant4.jpg" alt="Växt 4">
+            <h2>Tropisk Palm</h2>
+            <p>En vacker palm som skapar en tropisk känsla i ditt hem.</p>
+            <button class="btn" onclick="addToCart('Tropisk Palm')">Lägg i varukorg</button>
+        </div>
+        <div class="product">
+            <img src="images/plant5.jpg" alt="Växt 5">
+            <h2>Orkidé</h2>
+            <p>En elegant orkidé som är perfekt för alla miljöer.</p>
+            <button class="btn" onclick="addToCart('Orkidé')">Lägg i varukorg</button>
+        </div>
+        <div class="product">
+            <img src="images/plant6.jpg" alt="Växt 6">
+            <h2>Bonsai Träd</h2>
+            <p>Ett vackert bonsai-träd som är ett konstverk i sig själv.</p>
+            <button class="btn" onclick="addToCart('Bonsai Träd')">Lägg i varukorg</button>
+        </div>
+        <div class="product">
+            <img src="images/plant7.jpg" alt="Växt 7">
+            <h2>Fredslilja</h2>
+            <p>En fredslilja som renar luften och skapar en lugn atmosfär.</p>
+            <button class="btn" onclick="addToCart('Fredslilja')">Lägg i varukorg</button>
+        </div>
+        <div class="product">
+            <img src="images/plant8.jpg" alt="Växt 8">
+            <h2>Fikus</h2>
+            <p>En fikus som är lättskött och mycket dekorativ.</p>
+            <button class="btn" onclick="addToCart('Fikus')">Lägg i varukorg</button>
+        </div>
+        <div class="product">
+            <img src="images/plant9.jpg" alt="Växt 9">
+            <h2>Dracena</h2>
+            <p>En dracena som är perfekt för att ge en tropisk känsla.</p>
+            <button class="btn" onclick="addToCart('Dracena')">Lägg i varukorg</button>
+        </div>
+        <div class="product">
+            <img src="images/plant10.jpg" alt="Växt 10">
+            <h2>Kaktus</h2>
+            <p>En kaktus som är både unik och lättskött.</p>
+            <button class="btn" onclick="addToCart('Kaktus')">Lägg i varukorg</button>
+        </div>
+        <div class="product">
+            <img src="images/plant11.jpg" alt="Växt 11">
+            <h2>Lavendel</h2>
+            <p>En vacker lavendel som sprider en härlig doft.</p>
+            <button class="btn" onclick="addToCart('Lavendel')">Lägg i varukorg</button>
+        </div>
+        <div class="product">
+            <img src="images/plant12.jpg" alt="Växt 12">
+            <h2>Rosmarin</h2>
+            <p>En aromatisk rosmarin som passar perfekt i köket.</p>
+            <button class="btn" onclick="addToCart('Rosmarin')">Lägg i varukorg</button>
+        </div>
+    </div>
+</body>
+</html>

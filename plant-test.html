@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-569QZVXL');</script>
+    <!-- End Google Tag Manager -->
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-569QZVXL"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Växt Test</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/scripts.js" defer></script>
+    <style>
+        body {
+            font-size: 1.2em; 
+            padding: 20px; 
+        }
+        .slider-container {
+            display: flex;
+            align-items: center;
+            justify-content: center; 
+            flex-direction: column; 
+            margin-bottom: 30px; 
+        }
+        .slider-container input[type=range] {
+            flex: 1;
+            background: transparent;
+            -webkit-appearance: none;
+            appearance: none;
+            width: 80%; 
+            height: 10px; 
+            border-radius: 5px;
+            background: #ddd;
+            outline: none;
+            opacity: 0.7;
+            transition: opacity .2s;
+            margin-bottom: 10px; 
+        }
+        .slider-container input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px; 
+            height: 20px; 
+            border-radius: 50%;
+            background: url('images/leaf.png') no-repeat center;
+            background-size: cover;
+            cursor: pointer;
+        }
+        .slider-container input[type=range]::-moz-range-thumb {
+            width: 20px; 
+            height: 20px; 
+            border-radius: 50%;
+            background: url('images/leaf.png') no-repeat center;
+            background-size: cover;
+            cursor: pointer;
+        }
+        .slider-value {
+            font-size: 0.8em; 
+        }
+        #recommendations {
+            text-align: center; 
+            margin-top: 50px; 
+        }
+        #recommendations h3 {
+            font-size: 1.5em; 
+            font-weight: bold; 
+            margin-bottom: 10px; 
+        }
+        #recommendations h4 {
+            font-size: 1.2em; 
+            font-weight: bold; 
+            margin-bottom: 10px; 
+        }
+        #recommendations img {
+            width: 400px; 
+            height: auto;
+            margin-top: 20px; 
+        }
+        h2 {
+            text-align: center; 
+            margin-bottom: 20px; 
+        }
+        form {
+            max-width: 600px; 
+            margin: 0 auto; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Välkommen till Växtbutiken</h1>
+    </header>
+    <nav>
+        <a href="index.html">Hem</a>
+        <a href="products.html">Växter</a>
+        <a href="plant-test.html">Växt test</a>
+        <a href="#">Om oss</a>
+        <button id="menu-toggle">☰</button>
+    </nav>
+    <main>
+        <h2>Vilken växt passar dig?</h2>
+        <form id="plant-test-form">
+            <div>
+                <label for="sunlight">Hur mycket sol kommer växten att få? (1-10)</label>
+                <div class="slider-container">
+                    <input type="range" id="sunlight" name="sunlight" min="1" max="10" required>
+                    <div class="slider-value">1</div>
+                </div>
+            </div>
+            <div>
+                <label for="watering">Hur ofta vill du vattna växten? (1-10)</label>
+                <div class="slider-container">
+                    <input type="range" id="watering" name="watering" min="1" max="10" required>
+                    <div class="slider-value">1</div>
+                </div>
+            </div>
+            <div>
+                <label for="care">Hur mycket vill du sköta om växten? (1-10)</label>
+                <div class="slider-container">
+                    <input type="range" id="care" name="care" min="1" max="10" required>
+                    <div class="slider-value">1</div>
+                </div>
+            </div>
+            <button type="submit">Få rekommendationer</button>
+        </form>
+        <div id="recommendations">
+            <h3>Rekommendation:</h3>
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/plant-test.js"></script>
+    <script>
+        // Uppdatera slider-värdena dynamiskt
+        const sliders = document.querySelectorAll('input[type="range"]');
+        sliders.forEach(slider => {
+            slider.addEventListener('input', function() {
+                const value = this.value;
+                this.nextElementSibling.textContent = value;
+            });
+        });
+    </script>
+</body>
+</html>
